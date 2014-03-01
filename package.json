@@ -12,6 +12,5 @@
   "engines": {
     "atom": ">0.39.0"
   },
-  "test": 14,
   "dependencies": {}
 }
