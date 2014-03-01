@@ -1,0 +1,3 @@
+'.editor':
+  'alt-up': 'inc-dec-value:increment'
+  'alt-down': 'inc-dec-value:decrement'

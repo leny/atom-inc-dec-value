@@ -3,11 +3,15 @@
   "main": "./lib/inc-dec-value",
   "version": "0.0.1",
   "description": "An Atom package to increase / decrease number (and probably more) values.",
-  "activationEvents": [],
+  "activationEvents": [
+    "inc-dec-value:increment",
+    "inc-dec-value:decrement"
+  ],
   "repository": "https://github.com/leny/atom-inc-dec-value.git",
   "license": "MIT",
   "engines": {
     "atom": ">0.39.0"
   },
+  "test": 14,
   "dependencies": {}
 }
