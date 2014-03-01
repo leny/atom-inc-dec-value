@@ -22,6 +22,14 @@ transform = ( editor, up ) ->
             when "on" then "off"
             when "off" then "on"
 
+    unless sNewText
+        if sCurrentWord is sCurrentWord.toLowerCase()
+            sNewText = sCurrentWord.charAt( 0 ).toUpperCase() + sCurrentWord.substring( 1 ).toLowerCase()
+        else if sCurrentWord.charAt( 0 ) is sCurrentWord.charAt( 0 ).toUpperCase() and sCurrentWord.charAt( 1 ) is sCurrentWord.charAt( 1 ).toLowerCase()
+            sNewText = sCurrentWord.toUpperCase()
+        else
+            sNewText = sCurrentWord.toLowerCase()
+
     if sNewText
         editor.setTextInBufferRange oCurrentWordRange, "#{ sNewText }"
         editor.setCursorBufferPosition oPreviousCursorPosition
