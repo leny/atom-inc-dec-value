@@ -1,7 +1,7 @@
 {
   "name": "inc-dec-value",
   "main": "./lib/inc-dec-value",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "An Atom package to increase / decrease number values.",
   "activationEvents": [
     "inc-dec-value:increment",
