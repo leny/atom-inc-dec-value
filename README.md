@@ -6,7 +6,7 @@
 
 ## Usage
 
-Hit `cmd+up` or `cmd+down` on a word.
+Hit `alt+up` or `alt+down` on a word.
 
 If the word is a `Number`, the plugin increase/decrease it.
 
