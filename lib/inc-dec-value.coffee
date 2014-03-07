@@ -1,6 +1,6 @@
 rMatchNumber = /(-*[0-9]+(?:\.[0-9]+)?)([^0-9]*)?/
 
-transform = ( editor, up ) ->
+transform = ( editor, up, amount = 1 ) ->
     sCurrentWord = editor.getWordUnderCursor()
     oCurrentWordRange = editor.getCursor().getCurrentWordBufferRange()
     oPreviousCursorPosition = editor.getCursorBufferPosition()
@@ -8,7 +8,7 @@ transform = ( editor, up ) ->
     # Number
     if aMatches = sCurrentWord.match rMatchNumber
         iCurrentNumber = parseFloat aMatches[ 1 ]
-        iNewNumber = if up then iCurrentNumber + 1 else iCurrentNumber - 1
+        iNewNumber = if up then iCurrentNumber + amount else iCurrentNumber - amount
         sNewText = "#{ iNewNumber }" + if aMatches[ 2 ]? then aMatches[ 2 ] else ""
     else
         # Keywords
@@ -42,3 +42,9 @@ module.exports =
         atom.workspaceView.command "inc-dec-value:decrement", ".editor", ->
             currentPane = atom.workspaceView.getActivePaneItem()
             transform currentPane, no
+        atom.workspaceView.command "inc-dec-value:increment-by-decade", ".editor", ->
+            currentPane = atom.workspaceView.getActivePaneItem()
+            transform currentPane, yes, 10
+        atom.workspaceView.command "inc-dec-value:decrement-by-decade", ".editor", ->
+            currentPane = atom.workspaceView.getActivePaneItem()
+            transform currentPane, no, 10

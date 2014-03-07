@@ -5,7 +5,9 @@
   "description": "An Atom package to increase / decrease number values.",
   "activationEvents": [
     "inc-dec-value:increment",
-    "inc-dec-value:decrement"
+    "inc-dec-value:decrement",
+    "inc-dec-value:increment-by-decade",
+    "inc-dec-value:decrement-by-decade"
   ],
   "repository": "https://github.com/leny/atom-inc-dec-value.git",
   "license": "MIT",
