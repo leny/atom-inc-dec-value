@@ -3,16 +3,18 @@
   "main": "./lib/inc-dec-value",
   "version": "0.0.6",
   "description": "An Atom package to increase / decrease number values.",
-  "activationEvents": [
-    "inc-dec-value:increment",
-    "inc-dec-value:decrement",
-    "inc-dec-value:increment-by-decade",
-    "inc-dec-value:decrement-by-decade"
-  ],
+  "activationCommands": {
+    "atom-text-editor": [
+      "inc-dec-value:increment",
+      "inc-dec-value:decrement",
+      "inc-dec-value:increment-by-decade",
+      "inc-dec-value:decrement-by-decade"
+    ]
+  },
   "repository": "https://github.com/leny/atom-inc-dec-value.git",
   "license": "MIT",
   "engines": {
-    "atom": ">0.170.0"
+    "atom": ">0.199.0"
   },
   "dependencies": {}
 }
